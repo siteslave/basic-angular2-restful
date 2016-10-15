@@ -7,7 +7,6 @@
 # dependencies
 /node_modules
 /bower_components
-/src/assets
 
 # IDEs and editors
 /.idea
