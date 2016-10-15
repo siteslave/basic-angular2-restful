@@ -1,0 +1,27 @@
+<ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li class="active">New Posts</li>
+</ol>
+
+<form>
+  <div class="form-group">
+    <label>User</label>
+    <select class="form-control" [(ngModel)]="userId" [ngModelOptions]="{standalone: true}">
+      <option value=""></option>
+      <option *ngFor="let user of users" value="{{ user.id }}" >{{ user.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" [(ngModel)]="title" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="title">
+  </div>
+  <div class="form-group">
+    <label>Body</label>
+    <textarea class="form-control" [(ngModel)]="body" [ngModelOptions]="{standalone: true}" rows="3"></textarea>
+  </div>
+
+  <button type="button" class="btn btn-primary" [disabled]="!title || !body" (click)="save()">
+    Save
+  </button>
+</form>

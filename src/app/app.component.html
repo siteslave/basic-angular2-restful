@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <i class="fa fa-windows"></i> My App
+      </a>
+      <ul class="nav navbar-nav">
+        <li><a href="/home" routerLink="/home">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="/about" routerLink="/about">About</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
